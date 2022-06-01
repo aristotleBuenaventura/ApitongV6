@@ -1450,27 +1450,28 @@ if (isset($_POST["guests"])){
   $guests = "";
 }
 
-
 if(isset($_POST["book1"]))
 {
   if (isset($_SESSION['email'])){
+
     if($_POST["package"] == "package1")
     {
+      
       $pricePerHead = 1200;
       $total = $guests * $pricePerHead;
-      mysqli_query($link, "insert into reservation values(NULL,'Anniversary','$_POST[bookingDate]','$_POST[package]', $guests, $pricePerHead, $total )");
+      mysqli_query($link, "insert into reservation values(NULL,'Anniversary','$_POST[bookingDate]','$_POST[package]', $guests, $pricePerHead, $total, '$emailDB')");
     }
     if($_POST["package"] == "package2")
     {
       $pricePerHead = 1600;
       $total = $guests * $pricePerHead;
-      mysqli_query($link, "insert into reservation values(NULL,'Anniversary','$_POST[bookingDate]','$_POST[package]', $guests, $pricePerHead, $total )");
+      mysqli_query($link, "insert into reservation values(NULL,'Anniversary','$_POST[bookingDate]','$_POST[package]', $guests, $pricePerHead, $total, '$emailDB'");
     }
     if($_POST["package"] == "package3")
     {
       $pricePerHead = 1900;
       $total = $guests * $pricePerHead;
-      mysqli_query($link, "insert into reservation values(NULL,'Anniversary','$_POST[bookingDate]','$_POST[package]', $guests, $pricePerHead, $total )");
+      mysqli_query($link, "insert into reservation values(NULL,'Anniversary','$_POST[bookingDate]','$_POST[package]', $guests, $pricePerHead,$total, '$emailDB' )");
     }
   }
   else {
@@ -1491,19 +1492,19 @@ elseif(isset($_POST["book2"]))
     {
       $pricePerHead = 1200;
       $total = $guests * $pricePerHead;
-      mysqli_query($link, "insert into reservation values(NULL,'Birthday','$_POST[bookingDate]','$_POST[package]', $guests, $pricePerHead, $total )");
+      mysqli_query($link, "insert into reservation values(NULL,'Birthday','$_POST[bookingDate]','$_POST[package]', $guests, $pricePerHead, $total, '$emailDB' )");
     }
     if($_POST["package"] == "package2")
     {
       $pricePerHead = 1600;
       $total = $guests * $pricePerHead;
-      mysqli_query($link, "insert into reservation values(NULL,'Birthday','$_POST[bookingDate]','$_POST[package]', $guests, $pricePerHead, $total )");
+      mysqli_query($link, "insert into reservation values(NULL,'Birthday','$_POST[bookingDate]','$_POST[package]', $guests, $pricePerHead, $total, '$emailDB' )");
     }
     if($_POST["package"] == "package3")
     {
       $pricePerHead = 1900;
       $total = $guests * $pricePerHead;
-      mysqli_query($link, "insert into reservation values(NULL,'Birthday','$_POST[bookingDate]','$_POST[package]', $guests, $pricePerHead, $total )");
+      mysqli_query($link, "insert into reservation values(NULL,'Birthday','$_POST[bookingDate]','$_POST[package]', $guests, $pricePerHead, $total, '$emailDB' )");
     }
   }
   else {
@@ -1521,19 +1522,19 @@ elseif(isset($_POST["book3"]))
     {
       $pricePerHead = 1200;
       $total = $guests * $pricePerHead;
-      mysqli_query($link, "insert into reservation values(NULL,'Debut','$_POST[bookingDate]','$_POST[package]', $guests, $pricePerHead, $total )");
+      mysqli_query($link, "insert into reservation values(NULL,'Debut','$_POST[bookingDate]','$_POST[package]', $guests, $pricePerHead, $total, '$emailDB' )");
     }
     if($_POST["package"] == "package2")
     {
       $pricePerHead = 1600;
       $total = $guests * $pricePerHead;
-      mysqli_query($link, "insert into reservation values(NULL,'Debut','$_POST[bookingDate]','$_POST[package]', $guests, $pricePerHead, $total )");
+      mysqli_query($link, "insert into reservation values(NULL,'Debut','$_POST[bookingDate]','$_POST[package]', $guests, $pricePerHead, $total, '$emailDB' )");
     }
     if($_POST["package"] == "package3")
     {
       $pricePerHead = 1900;
       $total = $guests * $pricePerHead;
-      mysqli_query($link, "insert into reservation values(NULL,'Debut','$_POST[bookingDate]','$_POST[package]', $guests, $pricePerHead, $total )");
+      mysqli_query($link, "insert into reservation values(NULL,'Debut','$_POST[bookingDate]','$_POST[package]', $guests, $pricePerHead, $total, '$emailDB' )");
     }
   }
   else {
@@ -1552,19 +1553,19 @@ elseif(isset($_POST["book4"]))
     {
       $pricePerHead = 1200;
       $total = $guests * $pricePerHead;
-      mysqli_query($link, "insert into reservation values(NULL,'Promenade','$_POST[bookingDate]','$_POST[package]', $guests, $pricePerHead, $total )");
+      mysqli_query($link, "insert into reservation values(NULL,'Promenade','$_POST[bookingDate]','$_POST[package]', $guests, $pricePerHead, $total, '$emailDB')");
     }
     if($_POST["package"] == "package2")
     {
       $pricePerHead = 1600;
       $total = $guests * $pricePerHead;
-      mysqli_query($link, "insert into reservation values(NULL,'Promenade','$_POST[bookingDate]','$_POST[package]', $guests, $pricePerHead, $total )");
+      mysqli_query($link, "insert into reservation values(NULL,'Promenade','$_POST[bookingDate]','$_POST[package]', $guests, $pricePerHead, $total, '$emailDB' )");
     }
     if($_POST["package"] == "package3")
     {
       $pricePerHead = 1900;
       $total = $guests * $pricePerHead;
-      mysqli_query($link, "insert into reservation values(NULL,'Promenade','$_POST[bookingDate]','$_POST[package]', $guests, $pricePerHead, $total )");
+      mysqli_query($link, "insert into reservation values(NULL,'Promenade','$_POST[bookingDate]','$_POST[package]', $guests, $pricePerHead, $total, '$emailDB' )");
     }
   }
   else {
@@ -1583,19 +1584,19 @@ elseif(isset($_POST["book5"]))
     {
       $pricePerHead = 1200;
       $total = $guests * $pricePerHead;
-      mysqli_query($link, "insert into reservation values(NULL,'Wedding','$_POST[bookingDate]','$_POST[package]', $guests, $pricePerHead, $total )");
+      mysqli_query($link, "insert into reservation values(NULL,'Wedding','$_POST[bookingDate]','$_POST[package]', $guests, $pricePerHead, $total, '$emailDB' )");
     }
     if($_POST["package"] == "package2")
     {
       $pricePerHead = 1600;
       $total = $guests * $pricePerHead;
-      mysqli_query($link, "insert into reservation values(NULL,'Wedding','$_POST[bookingDate]','$_POST[package]', $guests, $pricePerHead, $total )");
+      mysqli_query($link, "insert into reservation values(NULL,'Wedding','$_POST[bookingDate]','$_POST[package]', $guests, $pricePerHead, $total, '$emailDB' )");
     }
     if($_POST["package"] == "package3")
     {
       $pricePerHead = 1900;
       $total = $guests * $pricePerHead;
-      mysqli_query($link, "insert into reservation values(NULL,'Wedding','$_POST[bookingDate]','$_POST[package]', $guests, $pricePerHead, $total )");
+      mysqli_query($link, "insert into reservation values(NULL,'Wedding','$_POST[bookingDate]','$_POST[package]', $guests, $pricePerHead, $total, '$emailDB' )");
     }
   }
   else {
